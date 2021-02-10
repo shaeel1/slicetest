@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+        <title>Contact Us | Slice N Spice</title>
+        <link rel="icon"
+            href="https://static.wixstatic.com/media/97335a_30d33ee617c44753a2641d38fc3cebe5~mv2_d_2481_2482_s_4_2.png/v1/fill/w_348,h_339,al_c,q_85,usm_2.00_1.00_0.00/Slice%20%26%20Spice%20logo_RGB%20PINK%20GREEN%20L%20GREY.webp"
+            type="image/x-icon">
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
+    <script>
+        function welcome() {
+            test = document.getElementById("name1").value;
+            test1 = document.getElementById("email1").value;
+            test2 = document.getElementById("msg1").value;
+                Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "dummy058035@gmail.com",
+                    Password: "aliraza1A",
+                    To: 'shaeelbinkhalil@gmail.com',
+                    From: "dummy058035@gmail.com",
+                    Subject: test1,
+                    Body: `Name : ${test}             Message : ${test2}`,
+                }).then(
+                    message => alert(message)
+                );
+            }   
+    </script>
+</head>
+
+<body>
+    <form>
+    Name: <input type="text" id="name1">
+    Email: <input type="text" id="email1">
+    Message: <input type="text" id="msg1">
+    <button type="submit" onclick="welcome()">Submit</button>
+    </form>
+</body>
+
+</html>
